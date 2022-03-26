@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Bookmark</title>
+  <style>
+      .active {
+          display: flex;
+          flex-direction: column;
+      }
+  </style>
+</head>
+<body class="font-sans">
+    <!-- Header Section -->
+    <header class="container">
+       <nav class=" flex items-center py-4 mt-4 sm:mt-12">
+           <div class="py-1">
+               <img class="xxs:w-3/4 w-auto lg:w-40" src="/resources/logo-bookmark.svg" alt="Bookmark Logo">
+           </div>
+           <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-b-blue-50 uppercase text-sm">
+               <li class="cursor-pointer hover:border-b-b-purpule-50 hover:border-b-2">Features</li>
+               <li class="cursor-pointer hover:border-b-b-purpule-50 hover:border-b-2">Pricing</li>
+               <li class="cursor-pointer hover:border-b-b-purpule-50 hover:border-b-2">Contact</li>
+               <button type="button" class="bg-b-red-50 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black rounded-md px-7 py-3 uppercase">Login</button>
+           </ul>
+           <div class="flex sm:hidden flex-1 justify-end">
+               <button id="toggleButton"><img class="xxs:w-6 w-8" src="/resources/hambureger-icon.svg" alt="Hamburger Icon" /></button>
+           </div>
+       </nav>
+       <ul class="hidden text-b-blue-50 uppercase text-sm gap-8 ml-2" id="navElement">
+            <li class="cursor-pointer hover:border-l-b-purpule-50 hover:border-l-2">Features</li>
+            <li class="cursor-pointer hover:border-l-b-purpule-50 hover:border-l-2">Pricing</li>
+            <li class="cursor-pointer hover:border-l-b-purpule-50 hover:border-l-2">Contact</li>
+            <button type="button" class="bg-b-red-50 text-white hover:bg-white hover:text-black hover:border-[1px] w-32 h-auto mt-2 hover:border-black rounded-md px-7 py-3 uppercase">Login</button>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container relative">
+        <div class=" flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
+            <!-- Content -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+                <h2 class="text-b-blue-50 text-3xl md:text-4xl lg:text-5xl text-center lg:text-left mb-6">
+                    Simple Bookmark Manager
+                </h2>
+                <p class="text-b-grey-50 text-lg text-center lg:text-left mb-6">
+                     A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+                     load instantly. Try it for free...
+                </p>
+                <div class="flex justify-center flex-wrap gap-6 mb-10 lg:mb-0">
+                    <button type="button" class="btn btn-purple hover:bg-b-white-50 hover:text-black">Get it on Chrome</button>
+                    <button type="button" class="btn btn-white hover:bg-b-purpule-50 hover:text-white">Get it on Firefox</button>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+                <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full shadow-2xl hover:shadow-b-purpule-50 sm:shadow-none" src="/resources/hero-bg.png" alt="Main Image">
+            </div>
+        </div>
+        <!-- Rounded Rectangle -->
+        <div class="hidden sm:block overflow-hidden bg-b-purpule-50 rounded-l-full absolute h-56 w-[40%] md:h-80 md:w-2/4 top-32 right-0 lg:-bottom-28 lg:-right-36"></div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-b-white-50 py-20 mt:20 lg:mt-60">
+        <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-b-blue-50">Features</h1>
+            <p class="text-center text-b-grey-50 mt-4">
+                Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
+                your devices so you can access them on the go.
+            </p>
+        </div>
+        
+        <!-- Feature 1 -->
+        <div class="container relative mt-20 lg:mt-24">
+            <div class=" flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- Image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full shadow-2xl hover:shadow-b-purpule-50 lg:shadow-none" src="/resources/illustration-features-tab-1.png" alt="Feature 1">
+                </div>
+                <!-- Content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-b-blue-50">Bookmark in one click</h1>
+                    <p class="text-b-grey-50 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control
+                        over how you manage your favourite sites.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-b-white-50 hover:text-black">More Info</button>
+                </div>
+            </div>
+            <!-- Rounded Rectangle -->
+         <div class="hidden lg:block overflow-hidden bg-b-purpule-50 rounded-r-full absolute h-80 w-2/4 -bottom-24 -left-36"></div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="container relative mt-20 lg:mt-52 ">
+            <div class=" flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+                <!-- Image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full shadow-2xl hover:shadow-b-purpule-50 lg:shadow-none" src="/resources/illustration-features-tab-2.png" alt="Feature 1">
+                </div>
+                <!-- Content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-b-blue-50">Intelligent search</h1>
+                    <p class="text-b-grey-50 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Our powerful search feature will help you find saved sites in no time at all. No need to crawl through all
+                        of your bookmarks.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-b-white-50 hover:text-black">More Info</button>
+                </div>
+            </div>
+            <!-- Rounded Rectangle -->
+            <div class="hidden lg:block overflow-hidden bg-b-purpule-50 rounded-l-full absolute h-80 w-2/4 -bottom-24 -right-36"></div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="container relative mt-20 lg:mt-52">
+            <div class=" flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- Image -->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full shadow-2xl hover:shadow-b-purpule-50 lg:shadow-none" src="/resources/illustration-features-tab-3.png" alt="Feature 1">
+                </div>
+                <!-- Content -->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-b-blue-50">Share your bookmarks</h1>
+                    <p class="text-b-grey-50 my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
+                        click of a button.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-b-white-50 hover:text-black">More Info</button>
+                </div>
+            </div>
+            <!-- Rounded Rectangle -->
+            <div class="hidden lg:block overflow-hidden bg-b-purpule-50 rounded-r-full absolute h-80 w-2/4 -bottom-24 -left-36"></div>
+        </div>
+         
+    </section>
+
+    <!-- Download -->
+    <section class="py-20 mt-20">
+        <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-b-blue-50">Download the extension</h1>
+            <p class="text-center text-b-grey-50 mt-4">
+                We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
+                prioritize.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+            <!-- Card 1 -->
+            <div class="flex flex-col rounded-md shadow-md lg:mb-16 transform hover:scale-110 ">
+                <div class="p-6 flex flex-col items-center ">
+                    <img src="/resources/chromelogo.svg" alt="chrome logo">
+                    <h3 class="mt-5 mb-2 text-b-blue-50 text-lg">Add to Chrome</h3>
+                    <p class="mb-2 text-b-grey-50 font-light">Minimum Version 62</p>
+                </div>
+                <hr class="border-b border-b-white-50" />
+                <div class="flex p-6">
+                    <button type="button" class="btn btn-purple flex-1 hover:bg-b-white-50 hover:text-black">Add & Install Extension</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex flex-col rounded-md shadow-md lg:my-8 transform hover:scale-110">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="/resources/Firefoxlogo.svg" alt="firefox logo">
+                    <h3 class="mt-5 mb-2 text-b-blue-50 text-lg">Add to Firefox</h3>
+                    <p class="mb-2 text-b-grey-50 font-light">Minimum Version 62</p>
+                </div>
+                <hr class="border-b border-b-white-50" />
+                <div class="flex p-6">
+                    <button type="button" class="btn btn-purple flex-1 hover:bg-b-white-50 hover:text-black">Add & Install Extension</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex flex-col rounded-md shadow-md lg:mt-16 transform hover:scale-110">
+                <div class="p-6 flex flex-col items-center">
+                    <img src="/resources/Operalogo.svg" alt="opera logo">
+                    <h3 class="mt-5 mb-2 text-b-blue-50 text-lg">Add to Opera</h3>
+                    <p class="mb-2 text-b-grey-50 font-light">Minimum Version 62</p>
+                </div>
+                <hr class="border-b border-b-white-50" />
+                <div class="flex p-6">
+                    <button type="button" class="btn btn-purple flex-1 hover:bg-b-white-50 hover:text-black">Add & Install Extension</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="bg-b-white-50 py-20">
+        <div class="container"> 
+            <!-- Heading -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-b-blue-50">Frequently Asked Questions</h1>
+            <p class="text-center text-b-grey-50 mt-4">
+                Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+            </p>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
+
+            <!-- FAQ 1 -->
+            <div class="flex items-center border-b-1 py-4">
+                <span class="flex-1 font-semibold">What is a Bookmark?</span>
+                <img class="xxs:w-5 w-6 cursor-pointer" src="/resources/arrowdown.svg" alt="arrowdown" id="arrow1Element"/>
+            </div>
+            <p class="hidden text-base pb-2" id="faq1Para">
+                A bookmark is a place holder for a web page that will allow you quick access to that 
+                page instead of having to browse to it or search for it. Instead of typing a web page in Google, 
+                clicking the bookmark will direct you to that page immediately.
+            </p>
+            <hr>
+            <!-- FAQ 2 -->
+            <div class="flex items-center border-b-1 py-4">
+                <span class="flex-1 font-semibold">How can i request a new browser?</span>
+                <img class="xxs:w-5 w-6 cursor-pointer" src="/resources/arrowdown.svg" alt="arrowdown" id="arrow2Element">
+            </div>
+            <p class="hidden text-base pb-2" id="faq2Para">
+                You can switch browsers without losing your settings and all the bookmarks for your favorite websites.
+            </p>
+            <hr>
+            <!-- FAQ 3 -->
+            <div class="flex items-center border-b-1 py-4">
+                <span class="flex-1 font-semibold">is there a mobile app?</span>
+                <img class="xxs:w-5 w-6 cursor-pointer" src="/resources/arrowdown.svg" alt="arrowdown" id="arrow3Element">
+            </div>
+            <p class="hidden text-base pb-2" id="faq3Para">
+                At present there is no mobile app. App is under development.
+            </p>
+            <hr>
+            <!-- FAQ 4 -->
+            <div class="flex items-center border-b-1 py-4">
+                <span class="flex-1 font-semibold">What about other Chromium browsers?</span>
+                <img class="xxs:w-5 w-6 cursor-pointer" src="/resources/arrowdown.svg" alt="arrowdown" id="arrow4Element">
+            </div>
+            <p class="hidden text-base pb-2" id="faq4Para">
+                Chromium is a free and open-source web browser project, principally developed and maintained by Google. 
+                This codebase provides the vast majority of code for the Google Chrome browser, which is proprietary software 
+                and has some additional features.
+            </p>
+            <hr>
+            <button type="button" class="mt-12 flex self-center btn btn-purple hover:bg-b-white-50 hover:text-black">More Info</button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class=" bg-b-purpule-50 text-white py-20">
+        <div class="container">
+            <div class="sm:w-3/4 lg:w-2/4 mx-auto">
+                <p class="font-light uppercase text-center mb-8">35,000+ Already Joined</p>
+                <h1 class="text-3xl text-center">Stay up-to-date with what we're doing</h1>
+                <div class="flex flex-col gap-6 mt-8">
+                    <input type="text" placeholder="Enter your Email address" class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black" />
+                    <button type="button" class="mt-8 flex self-center btn bg-b-red-50 hover:bg-b-white-50 hover:text-black">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-b-blue-50 py-8">
+        <div class="container flex flex-col md:flex-row items-center">
+            <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
+                <img src="/resources/logo-bookmark-white.png" alt="Bookmark Logo">
+                <ul class="flex text-white uppercase gap-12 text-xs">
+                    <li class="cursor-pointer">Features</li>
+                    <li class="cursor-pointer">Pricing</li>
+                    <li class="cursor-pointer">Contact</li>
+                </ul>
+            </div>
+            <div class="flex mt-12 gap-10 md:mt-0">
+                <img class="xxs:w-10 w-40 hover:animate-bounce" src="/resources/icons8-facebook.svg" alt="facebook logo"/>
+                <img class="xxs:w-10 w-20 bg-b-white-50 rounded-full hover:animate-pulse"  src="/resources/icons8-twitter-240.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
